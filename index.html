@@ -7,20 +7,16 @@
         <script src="https://unpkg.com/vue@2.7.14"></script>
     </head>
     <body>
-        <div id="vue-app">
+        <div id="vue-app-one">
             <!-- bag image -->
-            <div id="bag" v-bind:class="{burst:ended}"></div>
-
-            <!-- bag health bar -->
-            <div id="bag-health">
-                <div v-bind:style="{width:health+'%'}"></div>
-            </div>
-
-            <!-- game control buttons -->
-            <div id="controls">
-                <button v-on:click="punch" v-show="!ended">Punch</button>
-                <button v-on:click="restart" v-show="ended">Restart</button>
-            </div>
+         <h2>{{title}}</h2>
+         <p>{{greet}}</p>
+        </div>
+        <div id="vue-app-two">
+            <!-- bag image -->
+         <h2>{{title}}</h2>
+         <p>{{greet}}</p>
+         <button v-on:click="changeTitle">change app one title</button>
         </div>
     </body>
 

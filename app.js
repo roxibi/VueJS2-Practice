@@ -1,22 +1,31 @@
-new Vue({
-    el: "#vue-app",
+var one = new Vue({
+    el: "#vue-app-one",
     data: {
-        health: 100,
-        ended: false,
+        title: "App one",
+    },
+    methods: {},
+    computed: {
+        greet: function () {
+          return  "hello from app one";
+        },
+    },
+});
+
+var two = new Vue({
+    el: "#vue-app-two",
+    data: {
+        title: "app two",
     },
     methods: {
-        punch: function () {
-            this.health -= 10;
-            if (this.health <= 0) {
-                this.ended = true;
-            }
-            console.debug(this.health);
-        },
-
-        restart: function () {
-            this.health = 100;
-            this.ended = false;
+      changeTitle:function(){
+        one.title='title changed'
+      }
+    },
+    computed: {
+        greet: function () {
+           return "this is app 2";
         },
     },
-    computed: {},
 });
+
+two.title="changed from outside vue instance"
