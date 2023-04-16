@@ -7,16 +7,19 @@
         <script src="https://unpkg.com/vue@2.7.14"></script>
     </head>
     <body>
+       
         <div id="vue-app-one">
             <!-- bag image -->
-         <h2>{{title}}</h2>
-         <p>{{greet}}</p>
+            <h2>{{title}}</h2>
+            <p>{{greet}}</p>
+            <greeting></greeting>
         </div>
         <div id="vue-app-two">
             <!-- bag image -->
-         <h2>{{title}}</h2>
-         <p>{{greet}}</p>
-         <button v-on:click="changeTitle">change app one title</button>
+            <h2>{{title}}</h2>
+            <p>{{greet}}</p>
+            <greeting></greeting>
+            <button v-on:click="changeTitle">change app one title</button>
         </div>
     </body>
 
